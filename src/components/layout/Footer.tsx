@@ -20,7 +20,7 @@ export function Footer() {
               <span className="text-[11px] tracking-[0.22em]">{siteConfig.brand}</span>
             </div>
             <p className="mt-6 max-w-[320px] text-[13px] leading-[1.7] opacity-70">
-              Refined body care & waxing rituals. Softness, fluidity, self-care,
+              Refined body care & waxing treatments. Softness, fluidity, self-care,
               harmony — El Paso, TX.
             </p>
           </div>

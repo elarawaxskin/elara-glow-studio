@@ -51,7 +51,7 @@ export function Services() {
           <div>
             <p className="mb-4 text-[11px] uppercase tracking-[0.22em]">Our Services</p>
             <h2 className="max-w-[520px] font-display text-[42px] leading-[0.95] md:text-[64px]">
-              Rituals designed around skin, not speed.
+              Treatments designed around skin, not speed.
             </h2>
           </div>
           <p className="max-w-[320px] text-[14px] leading-[1.7] text-text-soft">

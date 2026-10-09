@@ -14,7 +14,7 @@ export function Visit() {
               <h2 className="font-display text-[44px] leading-[0.9] md:text-[64px]">
                 Ready for your
                 <br />
-                glow ritual?
+                glow treatment?
               </h2>
               <p className="mt-6 max-w-[360px] text-[14px] leading-[1.7] text-text-soft">
                 One private suite, slow mornings, soft wax and aftercare that

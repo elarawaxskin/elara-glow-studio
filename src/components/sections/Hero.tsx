@@ -66,7 +66,7 @@ export function Hero() {
                   <p className="text-[11px] uppercase tracking-[0.18em] opacity-60">
                     Next Available
                   </p>
-                  <p className="mt-1 font-display text-[20px]">Glow Ritual · 60 min</p>
+                  <p className="mt-1 font-display text-[20px]">Glow Treatment · 60 min</p>
                 </div>
                 <span className="flex h-8 w-8 items-center justify-center rounded-full bg-perch text-[14px] text-white" aria-hidden="true">
                   ↗

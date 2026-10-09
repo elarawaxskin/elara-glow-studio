@@ -56,17 +56,17 @@ export const siteConfig: SiteConfig = {
   hero: {
     eyebrow: 'El Paso — West Side Studio · By Appointment',
     headline: 'Softness in\nevery detail.',
-    sub: 'Refined body care & waxing rituals crafted for comfort, confidence and calm.',
-    ctaPrimary: 'Book Your Ritual',
+    sub: 'Refined body care & waxing treatments crafted for comfort, confidence and calm.',
+    ctaPrimary: 'Book Your Treatment',
     ctaSecondary: 'Our Services',
     stats: [
       { value: '100%', label: 'Private Suite' },
       { value: 'Soft', label: 'Wax · Sensitive Skin' },
-      { value: 'Calm', label: 'No Rush Rituals' },
+      { value: 'Calm', label: 'No-Rush Treatments' },
     ],
     images: [
       { src: '/elara_1.jpg', alt: 'Elara Glow Studio treatment detail — soft light and calm textures' },
-      { src: '/elara_2.jpg', alt: 'Elara Glow Studio ritual moment — refined body care in progress' },
+      { src: '/elara_2.jpg', alt: 'Elara Glow Studio treatment moment — refined body care in progress' },
       { src: '/elara_3.jpg', alt: 'Elara Glow Studio private suite — serene west El Paso studio' },
       { src: '/elara_4.jpg', alt: 'Elara Glow Studio finishing touch — smooth, radiant skin' },
     ],
@@ -82,12 +82,12 @@ export const siteConfig: SiteConfig = {
     {
       title: 'Body Waxing',
       description:
-        'Full body rituals — arms, legs, underarms, face — with skin-first care.',
+        'Full-body treatments — arms, legs, underarms, face — with skin-first care.',
       accent: '#6E6D3A',
       icon: '◑',
     },
     {
-      title: 'Skin Comfort Rituals',
+      title: 'Skin Comfort Treatments',
       description:
         'Pre- and post-wax support to soothe, hydrate and restore natural glow.',
       accent: '#A2B6A5',
@@ -105,7 +105,7 @@ export const siteConfig: SiteConfig = {
       },
       {
         title: 'Continuity',
-        description: 'Rituals that honor renewal & self-connection.',
+        description: 'Care that honors renewal & self-connection.',
       },
     ],
   },

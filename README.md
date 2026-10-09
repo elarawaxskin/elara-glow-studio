@@ -1,6 +1,6 @@
 # Elara Glow Studio
 
-Refined body care & waxing rituals — West El Paso, TX.
+Refined body care & waxing treatments — West El Paso, TX.
 
 ## Stack
 
