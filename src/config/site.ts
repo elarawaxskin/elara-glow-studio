@@ -20,6 +20,12 @@ export interface HeroConfig {
   images: HeroImage[];
 }
 
+export interface BusinessHours {
+  day: string;
+  time: string;
+  closed?: boolean;
+}
+
 export interface AboutConfig {
   kicker: string;
   title: string;
@@ -40,6 +46,7 @@ export interface SiteConfig {
   instagramUrl: string;
   bookingUrl: string;
   hero: HeroConfig;
+  businessHours: BusinessHours[];
   services: Service[];
   about: AboutConfig;
   values: string[];
@@ -53,6 +60,15 @@ export const siteConfig: SiteConfig = {
   instagram: '@elaraglowstudio',
   instagramUrl: 'https://instagram.com/elaraglowstudio',
   bookingUrl: 'https://elaraglowstudio.glossgenius.com/',
+  businessHours: [
+    { day: 'Monday', time: '2 PM - 7:30 PM' },
+    { day: 'Tuesday', time: '2 PM - 7:30 PM' },
+    { day: 'Wednesday', time: '2 PM - 7:30 PM' },
+    { day: 'Thursday', time: '8 AM - 1:30 PM' },
+    { day: 'Friday', time: '8 AM - 2 PM' },
+    { day: 'Saturday', time: '9 AM - 3:30 PM' },
+    { day: 'Sunday', time: 'Closed', closed: true },
+  ],
   hero: {
     eyebrow: 'El Paso — West Side Studio · By Appointment',
     headline: 'Softness in\nevery detail.',

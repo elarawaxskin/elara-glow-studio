@@ -25,10 +25,16 @@ export function Header() {
             className="group flex items-center gap-3"
             aria-label="Elara Glow Studio — back to top"
           >
-            <span className="flex h-[28px] w-[28px] items-center justify-center rounded-full border border-text font-display text-[18px] leading-none">
-              E
-            </span>
-            <span className="text-[11px] font-[400] tracking-[0.22em]">
+            <img
+              src="/logo.png"
+              alt="Elara Glow Studio logo"
+              width={120}
+              height={120}
+              fetchPriority="high"
+              decoding="async"
+              className="h-[40px] w-auto object-contain"
+            />
+            <span className="hidden text-[11px] font-[400] tracking-[0.22em] sm:inline">
               {siteConfig.brand}
             </span>
           </a>

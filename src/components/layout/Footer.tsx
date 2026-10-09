@@ -14,8 +14,16 @@ export function Footer() {
         <div className="flex flex-col justify-between gap-10 md:flex-row">
           <div>
             <div className="flex items-center gap-3">
-              <span className="flex h-[30px] w-[30px] items-center justify-center rounded-full border border-silence/30 font-display text-[18px]">
-                E
+              <span className="flex items-center rounded-full bg-silence px-3 py-1.5">
+                <img
+                  src="/logo.png"
+                  alt="Elara Glow Studio logo"
+                  width={120}
+                  height={40}
+                  loading="lazy"
+                  decoding="async"
+                  className="h-[30px] w-auto object-contain"
+                />
               </span>
               <span className="text-[11px] tracking-[0.22em]">{siteConfig.brand}</span>
             </div>
