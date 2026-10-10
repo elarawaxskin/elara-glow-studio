@@ -3,6 +3,9 @@ export interface Service {
   description: string;
   accent: string;
   icon: string;
+  image: string;
+  imageAlt: string;
+  priceHint: string;
 }
 
 export interface HeroImage {
@@ -41,6 +44,11 @@ export interface ExperienceItem {
 export interface SiteConfig {
   brand: string;
   location: string;
+  address: string;
+  addressShort: string;
+  mapsUrl: string;
+  directionsUrl: string;
+  embedUrl: string;
   email: string;
   instagram: string;
   instagramUrl: string;
@@ -55,11 +63,19 @@ export interface SiteConfig {
 
 export const siteConfig: SiteConfig = {
   brand: 'ELARA GLOW STUDIO',
-  location: 'El Paso, TX — west',
+  location: '600 Sunland Park Dr Ste 1-600, El Paso, TX 79912',
+  address: '600 Sunland Park Dr Ste 1-600, El Paso, TX 79912',
+  addressShort: '600 Sunland Park Dr, Ste 1-600',
+  mapsUrl:
+    'https://www.google.com/maps/search/?api=1&query=600%20Sunland%20Park%20Dr%20Ste%201-600%20El%20Paso%20TX%2079912',
+  directionsUrl:
+    'https://www.google.com/maps/dir/?api=1&destination=600%20Sunland%20Park%20Dr%20Ste%201-600%2C%20El%20Paso%2C%20TX%2079912',
+  embedUrl:
+    'https://www.google.com/maps?q=600%20Sunland%20Park%20Dr%20Ste%201-600%2C%20El%20Paso%2C%20TX%2079912&output=embed',
   email: 'hello@elaraglow.studio',
   instagram: '@elaraglowstudio',
   instagramUrl: 'https://instagram.com/elaraglowstudio',
-  bookingUrl: 'https://elaraglowstudio.glossgenius.com/',
+  bookingUrl: 'https://elaraglowstudio.glossgenius.com/services',
   businessHours: [
     { day: 'Monday', time: '2 PM - 7:30 PM' },
     { day: 'Tuesday', time: '2 PM - 7:30 PM' },
@@ -72,7 +88,7 @@ export const siteConfig: SiteConfig = {
   hero: {
     eyebrow: 'El Paso — West Side Studio · By Appointment',
     headline: 'Softness in\nevery detail.',
-    sub: 'Refined body care & waxing treatments crafted for comfort, confidence and calm.',
+    sub: 'Refined body care & waxing treatments crafted for comfort, confidence and calm. Book a full body wax, face wax, or Brazilian wax in El Paso, TX — private West Side suite by appointment.',
     ctaPrimary: 'Book Your Treatment',
     ctaSecondary: 'Our Services',
     stats: [
@@ -89,25 +105,34 @@ export const siteConfig: SiteConfig = {
   },
   services: [
     {
-      title: 'Brazilian Specialist',
+      title: 'Full Body Wax',
       description:
-        'Precise, gentle technique focused on comfort and long-lasting smoothness.',
-      accent: '#335C53',
-      icon: '◐',
-    },
-    {
-      title: 'Body Waxing',
-      description:
-        'Full-body treatments — arms, legs, underarms, face — with skin-first care.',
+        'Full-body waxing with skin-first care — smooth, long-lasting results in a private suite.',
       accent: '#6E6D3A',
       icon: '◑',
+      image: '/treatments/half_legs.jpg',
+      imageAlt: 'Full body wax in El Paso, TX at Elara Glow Studio',
+      priceHint: 'From $10 · 10 min',
     },
     {
-      title: 'Skin Comfort Treatments',
+      title: 'Face Wax',
       description:
-        'Pre- and post-wax support to soothe, hydrate and restore natural glow.',
+        'Precise, gentle face waxing for sensitive skin — brows, lip, chin and full face.',
       accent: '#A2B6A5',
       icon: '◒',
+      image: '/treatments/face.jpg',
+      imageAlt: 'Face wax in El Paso, TX at Elara Glow Studio',
+      priceHint: 'From $12 · 15 min',
+    },
+    {
+      title: 'Brazilian Wax',
+      description:
+        'Our signature Brazilian — precise, gentle, focused on comfort and long-lasting smoothness.',
+      accent: '#335C53',
+      icon: '◐',
+      image: '/treatments/front_bikini.jpg',
+      imageAlt: 'Brazilian wax in El Paso, TX at Elara Glow Studio',
+      priceHint: 'From $40 · 20 min',
     },
   ],
   about: {
@@ -150,9 +175,10 @@ export const siteConfig: SiteConfig = {
 };
 
 export const NAV_LINKS = [
-  { id: 'services', label: 'Services', href: '#services' },
-  { id: 'about', label: 'About', href: '#about' },
-  { id: 'contact', label: 'Contact', href: '#contact' },
+  { id: 'services', label: 'Services', href: '/#services' },
+  { id: 'treatments', label: 'Treatments', href: '/treatments' },
+  { id: 'about', label: 'About', href: '/#about' },
+  { id: 'contact', label: 'Contact', href: '/#contact' },
 ] as const;
 
 export type NavId = (typeof NAV_LINKS)[number]['id'] | 'home';

@@ -94,16 +94,16 @@ export function HeroCarousel({ images, intervalMs = AUTOPLAY_MS, className }: He
               loading={i === 0 ? 'eager' : 'lazy'}
               {...(i === 0 ? ({ fetchpriority: 'high' } as ImgHTMLAttributes<HTMLImageElement>) : {})}
               draggable={false}
-              className="h-full w-full object-cover"
+              className="h-full w-full object-cover object-center brightness-[0.92]"
             />
           </div>
         );
       })}
 
-      {/* Soft legibility gradient so the booking card always reads well */}
+      {/* Soft legibility gradient so carousel dots always read well */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 z-[2] bg-gradient-to-t from-silence/40 via-transparent to-transparent"
+        className="pointer-events-none absolute inset-0 z-[2] bg-gradient-to-t from-[#1C211A]/50 via-transparent to-transparent"
       />
 
       {/* Arrows */}
@@ -113,7 +113,7 @@ export function HeroCarousel({ images, intervalMs = AUTOPLAY_MS, className }: He
             type="button"
             onClick={goPrev}
             aria-label="Previous photo"
-            className="absolute left-4 top-1/2 z-[3] flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-white/50 bg-silence/80 text-[18px] text-perch opacity-0 shadow-[0_8px_24px_rgba(54,61,50,0.18)] backdrop-blur transition hover:bg-silence focus-visible:opacity-100 group-hover/carousel:opacity-100 max-md:hidden"
+            className="absolute left-4 top-1/2 z-[3] flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-white/30 bg-[#1C211A]/60 text-[18px] text-silence opacity-0 shadow-[0_8px_24px_rgba(0,0,0,0.35)] backdrop-blur transition hover:bg-[#1C211A]/85 focus-visible:opacity-100 group-hover/carousel:opacity-100 max-md:hidden"
           >
             ←
           </button>
@@ -121,7 +121,7 @@ export function HeroCarousel({ images, intervalMs = AUTOPLAY_MS, className }: He
             type="button"
             onClick={goNext}
             aria-label="Next photo"
-            className="absolute right-4 top-1/2 z-[3] flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-white/50 bg-silence/80 text-[18px] text-perch opacity-0 shadow-[0_8px_24px_rgba(54,61,50,0.18)] backdrop-blur transition hover:bg-silence focus-visible:opacity-100 group-hover/carousel:opacity-100 max-md:hidden"
+            className="absolute right-4 top-1/2 z-[3] flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-white/30 bg-[#1C211A]/60 text-[18px] text-silence opacity-0 shadow-[0_8px_24px_rgba(0,0,0,0.35)] backdrop-blur transition hover:bg-[#1C211A]/85 focus-visible:opacity-100 group-hover/carousel:opacity-100 max-md:hidden"
           >
             →
           </button>
@@ -140,7 +140,7 @@ export function HeroCarousel({ images, intervalMs = AUTOPLAY_MS, className }: He
               aria-current={i === index ? 'true' : undefined}
               className={cn(
                 'h-[6px] rounded-full transition-all duration-500 backdrop-blur',
-                i === index ? 'w-[26px] bg-perch shadow' : 'bg-perch/40 hover:bg-perch/70 w-[6px]',
+                i === index ? 'w-[26px] bg-silence shadow' : 'bg-silence/40 hover:bg-silence/70 w-[6px]',
               )}
             />
           ))}

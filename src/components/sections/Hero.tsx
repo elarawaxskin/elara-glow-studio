@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { siteConfig } from '../../config/site';
 import { Button } from '../ui/Button';
 import { HeroCarousel } from '../ui/HeroCarousel';
@@ -12,25 +13,25 @@ export function Hero() {
       <div className="absolute inset-0" aria-hidden={false}>
         <HeroCarousel images={hero.images} className="h-full" />
       </div>
-      {/* Light veil so the original dark text always reads over any photo */}
+      {/* Cinematic dark scrim — strong on the left where copy lives, melts away on the right so photos shine */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 bg-gradient-to-r from-silence via-silence/85 to-silence/20 max-md:bg-gradient-to-b max-md:from-silence max-md:via-silence/85 max-md:to-silence/40"
+        className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[#1C211A]/85 via-[#1C211A]/55 to-[#1C211A]/10 max-md:bg-gradient-to-b max-md:from-[#1C211A]/85 max-md:via-[#1C211A]/60 max-md:to-[#1C211A]/20"
       />
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-silence/70 to-transparent"
+        className="pointer-events-none absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-[#1C211A]/60 to-transparent"
       />
 
-      <div className="relative z-[5] mx-auto grid w-full max-w-[1280px] items-end gap-10 px-6 pb-[64px] pt-[120px] text-text md:grid-cols-[1.15fr_0.85fr] md:gap-6 md:px-10 md:pb-[96px] md:pt-[160px]">
+      <div className="relative z-[5] mx-auto grid w-full max-w-[1280px] items-end gap-10 px-6 pb-[64px] pt-[120px] text-silence md:grid-cols-[1.15fr_0.85fr] md:gap-6 md:px-10 md:pb-[96px] md:pt-[160px]">
         <Reveal>
-          <p className="mb-8 text-[11px] font-bold uppercase tracking-[0.22em] text-text">
+          <p className="mb-8 text-[11px] font-bold uppercase tracking-[0.22em] text-silence/70">
             {hero.eyebrow}
           </p>
-          <h1 className="whitespace-pre-line font-display text-[54px] font-bold leading-[0.9] md:text-[92px] lg:text-[108px]">
+          <h1 className="whitespace-pre-line font-display text-[54px] font-[300] leading-[0.9] text-silence [text-shadow:0_2px_24px_rgba(0,0,0,0.45)] md:text-[92px] lg:text-[108px]">
             {hero.headline}
           </h1>
-          <p className="mt-8 max-w-[380px] text-[16px] font-bold leading-[1.6] text-text md:text-[17px]">
+          <p className="mt-8 max-w-[380px] text-[16px] font-normal leading-[1.6] text-silence/85 [text-shadow:0_1px_12px_rgba(0,0,0,0.4)] md:text-[17px]">
             {hero.sub}
           </p>
           <div className="mt-10 flex items-center gap-6">
@@ -41,18 +42,18 @@ export function Hero() {
             >
               {hero.ctaPrimary}
             </Button>
-            <Button href="#services" variant="ghost" className="rounded-none text-[13px] tracking-[0.08em]">
+            <Link to="/#services" className="text-[13px] tracking-[0.08em] text-silence underline underline-offset-[8px] decoration-white/30 hover:decoration-silence">
               {hero.ctaSecondary} →
-            </Button>
+            </Link>
           </div>
 
-          <dl className="mt-14 flex max-w-[520px] gap-12 border-t border-line pt-8 md:mt-20">
+          <dl className="mt-14 flex max-w-[520px] gap-12 border-t border-white/20 pt-8 md:mt-20">
             {hero.stats.map((stat) => (
               <div key={stat.label}>
-                <dt className="order-2 mt-1 text-[11px] font-bold uppercase tracking-[0.14em] text-text">
+                <dt className="order-2 mt-1 text-[11px] font-bold uppercase tracking-[0.14em] text-silence/60">
                   {stat.label}
                 </dt>
-                <dd className="order-1 font-display text-[28px] font-bold text-text">{stat.value}</dd>
+                <dd className="order-1 font-display text-[28px] font-bold text-silence">{stat.value}</dd>
               </div>
             ))}
           </dl>
@@ -60,7 +61,7 @@ export function Hero() {
 
         <Reveal delayMs={120} className="relative max-w-full">
           <div className="flex justify-center md:justify-end">
-            <div className="w-full max-w-[340px] rounded-[20px] border border-white/25 bg-silence/90 p-5 text-text shadow-[0_12px_40px_rgba(0,0,0,0.25)] backdrop-blur">
+            <div className="w-full max-w-[340px] rounded-[20px] border border-white/25 bg-silence p-5 text-text shadow-[0_24px_60px_rgba(0,0,0,0.35)] backdrop-blur-xl">
               <div className="flex items-start justify-between">
                 <div>
                   <p className="text-[11px] font-bold uppercase tracking-[0.18em] opacity-60">
@@ -85,7 +86,7 @@ export function Hero() {
               </dl>
             </div>
           </div>
-          <p className="absolute right-0 top-[-48px] hidden origin-right rotate-90 text-[10px] uppercase tracking-[0.32em] text-text md:block">
+          <p className="absolute right-0 top-[-48px] hidden origin-right rotate-90 text-[10px] uppercase tracking-[0.32em] text-silence/60 md:block">
             Softness · Precision · Calm
           </p>
         </Reveal>

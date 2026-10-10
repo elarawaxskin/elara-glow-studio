@@ -17,8 +17,9 @@ export function Visit() {
                 glow treatment?
               </h2>
               <p className="mt-6 max-w-[360px] text-[14px] leading-[1.7] text-text-soft">
-                One private suite, slow mornings, soft wax and aftercare that
-                lasts. Choose your time, we handle the rest.
+                Book a full body wax, face wax, or Brazilian wax in El Paso, TX.
+                One private West Side suite, slow mornings, soft wax and
+                aftercare that lasts.
               </p>
             </div>
             <div className="mt-10 flex flex-wrap gap-3">
@@ -36,11 +37,30 @@ export function Visit() {
           <div className="space-y-4">
             <div className="rounded-[24px] border border-line bg-white p-7">
               <p className="text-[11px] uppercase tracking-[0.18em] opacity-60">Location</p>
-              <p className="mt-3 font-display text-[22px]">West Side, El Paso, TX</p>
+              <a
+                href={siteConfig.directionsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-3 block font-display text-[22px] leading-[1.2] transition hover:opacity-70"
+              >
+                600 Sunland Park Dr
+                <br />
+                Ste 1-600, El Paso, TX 79912
+              </a>
               <p className="mt-2 text-[13px] leading-[1.6] text-text-soft">
-                Exact address shared after booking. Easy parking, private
-                entrance, calm interior.
+                Sunland Park area — easy parking, private entrance, calm
+                interior. By appointment only.
               </p>
+              <div className="mt-6 overflow-hidden rounded-[16px] border border-line">
+                <iframe
+                  title="Elara Glow Studio map — 600 Sunland Park Dr Ste 1-600, El Paso, TX 79912"
+                  src={siteConfig.embedUrl}
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  allowFullScreen
+                  className="h-[220px] w-full border-0"
+                />
+              </div>
               <div className="mt-6 flex flex-wrap gap-2">
                 <Badge>By Appointment Only</Badge>
                 <Badge tone="outline">LGBTQ+ Friendly</Badge>

@@ -1,9 +1,5 @@
+import { Link } from 'react-router-dom';
 import { siteConfig } from '../../config/site';
-
-function scrollToTop(event: React.MouseEvent<HTMLAnchorElement>) {
-  event.preventDefault();
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-}
 
 export function Footer() {
   const year = new Date().getFullYear();
@@ -28,8 +24,9 @@ export function Footer() {
               <span className="text-[11px] tracking-[0.22em]">{siteConfig.brand}</span>
             </div>
             <p className="mt-6 max-w-[320px] text-[13px] leading-[1.7] opacity-70">
-              Refined body care & waxing treatments. Softness, fluidity, self-care,
-              harmony — El Paso, TX.
+              Refined body care & waxing in El Paso, TX — full body wax, face
+              wax, and Brazilian wax in a private West Side suite. Softness,
+              self-care, harmony.
             </p>
           </div>
 
@@ -38,15 +35,18 @@ export function Footer() {
               <p className="mb-4 text-[11px] uppercase tracking-[0.18em] opacity-50">
                 Navigate
               </p>
-              <a href="#top" onClick={scrollToTop} className="block text-left opacity-80 hover:opacity-100">
+              <Link to="/" className="block text-left opacity-80 hover:opacity-100">
                 Home
-              </a>
-              <a href="#services" className="block opacity-80 hover:opacity-100">
+              </Link>
+              <Link to="/#services" className="block opacity-80 hover:opacity-100">
                 Services
-              </a>
-              <a href="#about" className="block opacity-80 hover:opacity-100">
+              </Link>
+              <Link to="/treatments" className="block opacity-80 hover:opacity-100">
+                Treatments
+              </Link>
+              <Link to="/#about" className="block opacity-80 hover:opacity-100">
                 About
-              </a>
+              </Link>
               <a
                 href={siteConfig.bookingUrl}
                 target="_blank"
@@ -68,7 +68,16 @@ export function Footer() {
               >
                 Instagram {siteConfig.instagram}
               </a>
-              <p className="opacity-60">{siteConfig.location}</p>
+              <a
+                href={siteConfig.mapsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block leading-[1.6] opacity-60 hover:opacity-100"
+              >
+                600 Sunland Park Dr Ste 1-600,
+                <br />
+                El Paso, TX 79912
+              </a>
               <p className="opacity-60">{siteConfig.email}</p>
             </div>
           </div>

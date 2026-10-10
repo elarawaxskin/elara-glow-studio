@@ -1,27 +1,21 @@
 import { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { NAV_LINKS, siteConfig, type NavId } from '../../config/site';
 import { cn } from '../../lib/cn';
 import { BookNowButton } from '../ui/Button';
 
-function scrollToTop() {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-}
-
 export function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [activeNav, setActiveNav] = useState<NavId>('home');
+  const { pathname } = useLocation();
+  const activeNav: NavId = pathname === '/treatments' ? 'treatments' : 'home';
 
   return (
     <header className="sticky top-0 z-50 border-b border-line bg-surface/80 backdrop-blur-[12px] [padding-top:var(--safe-area-inset-top)]">
       <div className="mx-auto flex h-[68px] max-w-[1280px] items-center justify-between px-6 md:px-10">
         <div className="flex items-center gap-8">
-          <a
-            href="#top"
-            onClick={(event) => {
-              event.preventDefault();
-              scrollToTop();
-              setActiveNav('home');
-            }}
+          <Link
+            to="/"
+            onClick={() => setMenuOpen(false)}
             className="group flex items-center gap-3"
             aria-label="Elara Glow Studio — back to top"
           >
@@ -37,13 +31,13 @@ export function Header() {
             <span className="hidden text-[11px] font-[400] tracking-[0.22em] sm:inline">
               {siteConfig.brand}
             </span>
-          </a>
+          </Link>
           <nav className="hidden items-center gap-8 text-[13px] tracking-[0.06em] md:flex" aria-label="Primary">
             {NAV_LINKS.map((link) => (
-              <a
+              <Link
                 key={link.id}
-                href={link.href}
-                onClick={() => setActiveNav(link.id)}
+                to={link.href}
+                onClick={() => setMenuOpen(false)}
                 aria-current={activeNav === link.id ? 'true' : undefined}
                 className={cn(
                   'transition hover:opacity-60',
@@ -51,7 +45,7 @@ export function Header() {
                 )}
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
           </nav>
         </div>
@@ -90,16 +84,14 @@ export function Header() {
           aria-label="Mobile"
         >
           {NAV_LINKS.map((link) => (
-            <a
+            <Link
               key={link.id}
-              href={link.href}
-              onClick={() => {
-                setMenuOpen(false);
-                setActiveNav(link.id);
-              }}
+              to={link.href}
+              onClick={() => setMenuOpen(false)}
+              className="text-left"
             >
               {link.label}
-            </a>
+            </Link>
           ))}
           <BookNowButton
             size="lg"
