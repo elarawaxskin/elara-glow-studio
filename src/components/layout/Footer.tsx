@@ -44,6 +44,9 @@ export function Footer() {
               <Link to="/treatments" className="block opacity-80 hover:opacity-100">
                 Treatments
               </Link>
+              <Link to="/blog" className="block opacity-80 hover:opacity-100">
+                Journal
+              </Link>
               <Link to="/#about" className="block opacity-80 hover:opacity-100">
                 About
               </Link>

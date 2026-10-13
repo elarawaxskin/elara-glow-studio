@@ -177,8 +177,9 @@ export const siteConfig: SiteConfig = {
 export const NAV_LINKS = [
   { id: 'services', label: 'Services', href: '/#services' },
   { id: 'treatments', label: 'Treatments', href: '/treatments' },
+  { id: 'journal', label: 'Journal', href: '/blog' },
   { id: 'about', label: 'About', href: '/#about' },
   { id: 'contact', label: 'Contact', href: '/#contact' },
 ] as const;
 
-export type NavId = (typeof NAV_LINKS)[number]['id'] | 'home';
+export type NavId = (typeof NAV_LINKS)[number]['id'] | 'home' | 'blog';

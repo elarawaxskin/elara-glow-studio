@@ -7,7 +7,12 @@ import { BookNowButton } from '../ui/Button';
 export function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const { pathname } = useLocation();
-  const activeNav: NavId = pathname === '/treatments' ? 'treatments' : 'home';
+  const activeNav: NavId =
+    pathname === '/treatments'
+      ? 'treatments'
+      : pathname.startsWith('/blog')
+        ? 'journal'
+        : 'home';
 
   return (
     <header className="sticky top-0 z-50 border-b border-line bg-surface/80 backdrop-blur-[12px] [padding-top:var(--safe-area-inset-top)]">
