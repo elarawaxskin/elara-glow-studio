@@ -33,7 +33,7 @@ export function About() {
         </Reveal>
 
         <Reveal delayMs={120} className="relative">
-          <div className="relative aspect-[4/5] overflow-hidden rounded-[32px] bg-icicle p-4 shadow-[0_20px_80px_rgba(54,61,50,0.10)] md:aspect-[4/5.2]">
+          <div className="relative aspect-[4/5] rounded-[32px] bg-icicle p-4 shadow-[0_20px_80px_rgba(54,61,50,0.10)] md:aspect-[4/5.2]">
             <div className="grain relative h-full w-full overflow-hidden rounded-[20px] bg-silence">
               <img
                 src="/founder.jpeg"
@@ -42,8 +42,8 @@ export function About() {
                 loading="lazy"
               />
             </div>
-            <p className="absolute -bottom-4 -right-2 rounded-full bg-perch px-5 py-3 text-[11px] uppercase tracking-[0.16em] text-silence shadow-lg md:right-6">
-              West El Paso · Private
+            <p className="absolute -bottom-4 left-1/2 z-10 -translate-x-1/2 whitespace-nowrap rounded-full bg-perch px-5 py-3 text-[11px] uppercase tracking-[0.16em] text-silence shadow-lg">
+              Founder · Jennifer Rodriguez
             </p>
           </div>
           <p className="mt-10 flex items-center gap-4 text-[11px] uppercase tracking-[0.18em] text-text-soft">

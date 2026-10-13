@@ -93,8 +93,8 @@ export const siteConfig: SiteConfig = {
     ctaSecondary: 'Our Services',
     stats: [
       { value: '100%', label: 'Private Suite' },
-      { value: 'Soft', label: 'Wax · Sensitive Skin' },
-      { value: 'Calm', label: 'No-Rush Treatments' },
+      { value: 'Wax', label: 'All Skin Types' },
+      { value: 'Swift', label: 'Technique · Skin-First' },
     ],
     images: [
       { src: '/elara_1.jpg', alt: 'Elara Glow Studio treatment detail — soft light and calm textures' },
@@ -167,7 +167,7 @@ export const siteConfig: SiteConfig = {
     'Self-care',
   ],
   experience: [
-    { label: 'Precision', description: 'Slow, intentional technique. No rushing.' },
+    { label: 'Precision', description: 'Precise, efficient technique. Kind to skin.' },
     { label: 'Warmth', description: 'Warm towels, soft light, calm breath.' },
     { label: 'Privacy', description: 'Private suite, discreet care, just for you.' },
     { label: 'Aftercare', description: 'Guidance that keeps skin calm at home.' },

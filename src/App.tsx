@@ -9,6 +9,7 @@ import { Philosophy } from "./components/sections/Philosophy";
 import { SeoLocalStrip } from "./components/sections/SeoLocalStrip";
 import { Services } from "./components/sections/Services";
 import { Visit } from "./components/sections/Visit";
+import { LashLiftPromo } from "./components/sections/LashLiftPromo";
 import { PackagesSection } from "./components/packages/PackagesSection";
 import { useReveal } from "./hooks/useReveal";
 import { TreatmentsPage } from "./pages/TreatmentsPage";
@@ -18,6 +19,7 @@ function Home() {
     <main>
       <Hero />
       <Services />
+      <LashLiftPromo />
       <PackagesSection />
       <SeoLocalStrip />
       <Philosophy />

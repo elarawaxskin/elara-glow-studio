@@ -94,7 +94,7 @@ export function HeroCarousel({ images, intervalMs = AUTOPLAY_MS, className }: He
               loading={i === 0 ? 'eager' : 'lazy'}
               {...(i === 0 ? ({ fetchpriority: 'high' } as ImgHTMLAttributes<HTMLImageElement>) : {})}
               draggable={false}
-              className="h-full w-full object-cover object-center brightness-[0.92]"
+              className="h-full w-full object-cover object-center brightness-[0.92] max-md:object-[center_25%] max-md:brightness-[0.78]"
             />
           </div>
         );

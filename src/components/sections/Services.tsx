@@ -7,7 +7,10 @@ import { Reveal } from '../ui/Reveal';
 function ServiceCard({ service, index }: { service: Service; index: number }) {
   return (
     <Reveal delayMs={index * 80}>
-      <article className="arch-top group bg-silence p-[10px] pb-8 shadow-[0_10px_30px_rgba(54,61,50,0.06)] transition-all duration-500 hover:shadow-[0_18px_50px_rgba(54,61,50,0.10)]">
+      <article className="arch-top group relative bg-silence p-[10px] pb-8 shadow-[0_10px_30px_rgba(54,61,50,0.06)] transition-all duration-500 hover:shadow-[0_18px_50px_rgba(54,61,50,0.10)]">
+        <span className="absolute left-1/2 top-[22px] z-10 -translate-x-1/2 whitespace-nowrap rounded-full bg-peat px-4 py-1.5 text-[11px] uppercase tracking-[0.14em] text-silence shadow">
+          {service.priceHint}
+        </span>
         <div className="arch-top relative h-[320px] overflow-hidden md:h-[380px]">
           <img
             src={service.image}
@@ -23,9 +26,6 @@ function ServiceCard({ service, index }: { service: Service; index: number }) {
             }}
             aria-hidden="true"
           />
-          <span className="absolute left-4 top-4 rounded-full bg-silence/90 px-4 py-1.5 text-[11px] uppercase tracking-[0.14em] backdrop-blur">
-            {service.priceHint}
-          </span>
         </div>
         <div className="px-6 pt-7">
           <h3 className="font-display text-[26px]">{service.title}</h3>
@@ -57,12 +57,12 @@ export function Services() {
           <div>
             <p className="mb-4 text-[11px] uppercase tracking-[0.22em]">Our Services</p>
             <h2 className="max-w-[520px] font-display text-[42px] leading-[0.95] md:text-[64px]">
-              Treatments designed around skin, not speed.
+              Skin-first waxing, done with efficient care.
             </h2>
           </div>
           <p className="max-w-[320px] text-[14px] leading-[1.7] text-text-soft">
             Book a full body wax, face wax, or Brazilian wax in El Paso, TX.
-            Three focused offerings — body, face, and Brazilian — slow,
+            Three focused offerings — body, face, and Brazilian — efficient,
             private, and fully guided.
           </p>
         </Reveal>

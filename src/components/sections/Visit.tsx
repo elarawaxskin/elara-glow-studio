@@ -8,8 +8,8 @@ export function Visit() {
     <section id="contact" className="relative max-w-[100vw] overflow-hidden bg-icicle" aria-label="Book your visit">
       <div className="mx-auto max-w-[1280px] px-6 py-[72px] md:px-10 md:py-[96px]">
         <Reveal className="grid items-end gap-8 md:grid-cols-[1.1fr_0.9fr]">
-          <div className="arch-full relative flex min-h-[460px] w-full max-w-full flex-col justify-between overflow-hidden bg-silence p-8 shadow-[0_20px_80px_rgba(54,61,50,0.08)] md:p-14 lg:p-16">
-            <div>
+          <div className="arch-full relative flex min-h-[460px] w-full max-w-full flex-col justify-between overflow-hidden bg-silence px-8 pb-8 pt-20 shadow-[0_20px_80px_rgba(54,61,50,0.08)] md:px-14 md:pb-14 md:pt-[120px] lg:px-16 lg:pb-16 lg:pt-[132px]">
+            <div className="relative z-10">
               <p className="mb-6 text-[11px] uppercase tracking-[0.22em]">Book Your Visit</p>
               <h2 className="font-display text-[44px] leading-[0.9] md:text-[64px]">
                 Ready for your
@@ -18,7 +18,7 @@ export function Visit() {
               </h2>
               <p className="mt-6 max-w-[360px] text-[14px] leading-[1.7] text-text-soft">
                 Book a full body wax, face wax, or Brazilian wax in El Paso, TX.
-                One private West Side suite, slow mornings, soft wax and
+                One private West Side suite, calm mornings, soft wax and
                 aftercare that lasts.
               </p>
             </div>

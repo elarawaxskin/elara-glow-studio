@@ -11,6 +11,9 @@ export interface Treatment {
   image: string;
   imageAlt: string;
   category: TreatmentCategory;
+  regularPriceLabel?: string;
+  badge?: string;
+  addOnLabel?: string;
 }
 
 export const TREATMENT_CATEGORIES: TreatmentCategory[] = [
@@ -57,5 +60,6 @@ export const TREATMENTS: Treatment[] = [
   { slug: 'combo-brazilian-butt', name: 'Brazilian & full butt (Female Anatomy)', priceLabel: '$90', price: 90, durationLabel: '40 min', durationMin: 40, description: 'Signature Brazilian paired with full butt for total confidence.', image: '/treatments/full_butt.jpg', imageAlt: 'Brazilian and full butt combo', category: 'Combos & Add-ons' },
   { slug: 'combo-brazilian-stomach', name: 'Brazilian & stomach strip (Female)', priceLabel: '$70', price: 70, durationLabel: '30 min', durationMin: 30, description: 'Brazilian plus stomach-strip detail.', image: '/treatments/stomach.jpg', imageAlt: 'Brazilian and stomach strip combo', category: 'Combos & Add-ons' },
   { slug: 'combo-brazilian-thigh', name: 'Brazilian & inner thigh (Female)', priceLabel: '$80', price: 80, durationLabel: '35 min', durationMin: 35, description: 'Brazilian paired with inner-thigh smoothing.', image: '/treatments/half_legs.jpg', imageAlt: 'Brazilian and inner thigh combo', category: 'Combos & Add-ons' },
-  { slug: 'korean-lash-lift', name: 'Korean Lash Lift', priceLabel: '$80', price: 80, durationLabel: '60 min', durationMin: 60, description: 'Gentle Korean lash lift for a wide-awake, natural curl.', image: '/treatments/face.jpg', imageAlt: 'Korean lash lift treatment', category: 'Lash' },
+  { slug: 'korean-lash-lift', name: 'Korean Lash Lift', priceLabel: '$60', price: 60, regularPriceLabel: '$80', badge: 'Limited Time', durationLabel: '60 min', durationMin: 60, description: 'Enhance your natural lashes with a customized lift designed to create a beautiful curl. Lifted. Defined. Effortlessly beautiful — opens & brightens the eyes with no extensions needed.', image: '/treatments/face.jpg', imageAlt: 'Korean lash lift in El Paso, TX — lifted natural lashes', category: 'Lash', addOnLabel: '+$10 with tint' },
+  { slug: 'korean-lash-lift-tint', name: 'Korean Lash Lift + Tint', priceLabel: '$70', price: 70, regularPriceLabel: '$90', badge: 'Limited Time', durationLabel: '75 min', durationMin: 75, description: 'Korean lash lift paired with a lash tint for extra definition — wake up ready, no mascara needed. Low-maintenance beauty.', image: '/treatments/face.jpg', imageAlt: 'Korean lash lift with tint in El Paso, TX', category: 'Lash', addOnLabel: 'Includes tint' },
 ];
