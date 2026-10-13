@@ -168,7 +168,7 @@ export const siteConfig: SiteConfig = {
   ],
   experience: [
     { label: 'Precision', description: 'Precise, efficient technique. Kind to skin.' },
-    { label: 'Warmth', description: 'Warm towels, soft light, calm breath.' },
+    { label: 'Smoothness', description: 'That post-wax smoothness — soft skin, calm finish, lasting glow.' },
     { label: 'Privacy', description: 'Private suite, discreet care, just for you.' },
     { label: 'Aftercare', description: 'Guidance that keeps skin calm at home.' },
   ],
