@@ -72,7 +72,7 @@ export const siteConfig: SiteConfig = {
     'https://www.google.com/maps/dir/?api=1&destination=600%20Sunland%20Park%20Dr%20Ste%201-600%2C%20El%20Paso%2C%20TX%2079912',
   embedUrl:
     'https://www.google.com/maps?q=600%20Sunland%20Park%20Dr%20Ste%201-600%2C%20El%20Paso%2C%20TX%2079912&output=embed',
-  email: 'hello@elaraglow.studio',
+  email: 'elarawaxskin@gmail.com',
   instagram: '@elaraglowstudio',
   instagramUrl: 'https://instagram.com/elaraglowstudio',
   bookingUrl: 'https://elaraglowstudio.glossgenius.com/services',
