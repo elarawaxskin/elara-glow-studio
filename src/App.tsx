@@ -15,6 +15,7 @@ import { SeoLocalStrip } from "./components/sections/SeoLocalStrip";
 import { Services } from "./components/sections/Services";
 import { Visit } from "./components/sections/Visit";
 import { LashLiftPromo } from "./components/sections/LashLiftPromo";
+import { FirstTimeGuestPromo } from "./components/sections/FirstTimeGuestPromo";
 import { PackagesSection } from "./components/packages/PackagesSection";
 import { useReveal } from "./hooks/useReveal";
 import { TreatmentsPage } from "./pages/TreatmentsPage";
@@ -38,6 +39,7 @@ function Home() {
   return (
     <main>
       <Hero />
+      <FirstTimeGuestPromo />
       <Services />
       <LashLiftPromo />
       <PackagesSection />
