@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { SeoLocalStrip } from '../components/sections/SeoLocalStrip';
+import { BlackFridayBanner } from '../components/sections/BlackFridayBanner';
 import { PackagesSection } from '../components/packages/PackagesSection';
 import { siteConfig } from '../config/site';
 import { TREATMENTS } from '../data/treatments';
@@ -51,6 +52,7 @@ export function TreatmentsPage() {
           </Reveal>
         </div>
       </section>
+      <BlackFridayBanner />
       <TreatmentCatalogue />
       <PackagesSection compact />
       <SeoLocalStrip />
