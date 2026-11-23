@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom"; 
 import { HelmetProvider } from "react-helmet-async";
 import { Suspense, lazy } from "react";
 import { Footer } from "./components/layout/Footer";
